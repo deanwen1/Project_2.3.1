@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+</head>
+<body>
+
+<form action="/edit" method="POST">
+
+    Edit User with Id <td th:text="${userEdit.getId()}"></td>
+    <input type="hidden" th:value="${userEdit.getId()}" th:attr="name='Id'" />
+    Name:<input type="text" th:value="${userEdit.getName()}" th:attr="name='Name'">
+    LastName:<input type="text" th:value="${userEdit.getLastName()}" th:attr="name='LastName'">
+    Age:<input type="text" th:value="${userEdit.getAge()}" th:attr="name='Age'">
+    <input type="submit" value="save">
+
+</form>
+</body>
+</html>
